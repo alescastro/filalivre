@@ -26,7 +26,7 @@
 ## Como executar
 
 1. Clone este repositório:
-   git clone https://github.com/seuusuario/fila-livre.git
+   git clone https://github.com/alescastro/filalivre.git
 
 2. Instale as dependências:
 flutter pub get
@@ -49,4 +49,4 @@ Histórico de filas e relatórios para estabelecimentos
 
 Contato
 Para dúvidas, sugestões ou contribuições, entre em contato:
-Alexandre Castro – castroale646@gmail.com
+Alexandre S. Castro – castroale646@gmail.com

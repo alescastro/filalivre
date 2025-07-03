@@ -8,6 +8,7 @@ class CitySelectionScreen extends StatelessWidget {
     'Passo Fundo',
     'Erechim',
     'Chapecó',
+    'Barão de Cotegipe',
   ];
 
   @override

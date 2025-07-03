@@ -17,7 +17,7 @@
 ## Tecnologias utilizadas
 
 - Flutter (Dart) para desenvolvimento multiplataforma (iOS e Android)
-- Gerenciamento de estado com Provider / Bloc / outro (ajustar conforme o que usa)
+- Gerenciamento de estado
 - Notificações locais para avisos da fila
 - Design baseado em Material Design, com cores e elementos modernos
 

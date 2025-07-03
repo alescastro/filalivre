@@ -31,6 +31,7 @@ class EstablishmentCard extends StatelessWidget {
           onPressed: onEnter,
           style: ElevatedButton.styleFrom(
             backgroundColor: const Color(0xFF3B82F6),
+            foregroundColor: Colors.white,
           ),
           child: const Text('Entrar'),
         ),

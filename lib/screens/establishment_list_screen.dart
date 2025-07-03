@@ -38,13 +38,43 @@ class EstablishmentListScreen extends StatelessWidget {
                             type: est['type'] ?? '',
                             imagePath: est['image'] ?? '',
                             onEnter: () {
-                              Navigator.pushNamed(
-                                context,
-                                '/queue',
-                                arguments: {
-                                  'establishment': est,
-                                  'city': city,
-                                },
+                              // dialog de confirmação de presença
+                              showDialog(
+                                context: context,
+                                builder: (context) => AlertDialog(
+                                  title: const Text(
+                                    '📍 Confirme sua presença',
+                                    style: TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                  content: const Text(
+                                    'Para entrar na fila, é necessário estar no estabelecimento.\n\n'
+                                    'Você confirma que já está no local?',
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(context),
+                                      child: const Text('Cancelar'),
+                                    ),
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: const Color(0xFF3B82F6),
+                                        foregroundColor: Colors.white,
+                                      ),
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                        Navigator.pushNamed(
+                                          context,
+                                          '/queue',
+                                          arguments: {
+                                            'establishment': est,
+                                            'city': city,
+                                          },
+                                        );
+                                      },
+                                      child: const Text('Sim, estou no local'),
+                                    ),
+                                  ],
+                                ),
                               );
                             },
                           ),
